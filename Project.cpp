@@ -1,31 +1,50 @@
-#include<iostream>
-
+#include <string>
+#include <iostream>
+#include <iomanip>
 using namespace std;
 
-void tablebg(int [][7]); // table 7 x 6
-
 int main  () {
+	int choice;
+
+cout << "\n";
+cout << "\n";	
+cout << setw(60) << "Welcome" <<endl ;
+cout << setw(60) << "To" << endl;
+cout << setw(60) << "CONNECT 4 Game" << endl;
+cout << "\n";
+cout << setw(60) << "XOXOXOX" << endl;
+cout << setw(60) << "OXOXOXO" << endl;
+cout << setw(60) << "XOXOXOX" << endl;
+cout << setw(60) << "OXOXOXO" << endl;
+cout << setw(60) << "XOXOXOX" << endl;
+cout << setw(60) << "OXOXOXO" << endl;
+cout << "\n";
 
 
-	int table [6][7] = {};
 
-	tablebg (table);
 	
-}
-	
+	while(choice != 3){
+		cout << setw(60) << "1. Player 1 vs Player 2" << endl;
+		cout << setw(60) << "2. Player vs AI" << endl;
+		cout << setw(60) << "3. Exit";
+		cout << "\n";
+		cout << "\n";
+		cout << setw(60) << "Input your choice : ";
+		cin >> choice;
 
-void tablebg (int table[6][7])  {
-	
-	for(int i=0 ; i<6 ; i++){
-		for(int j=0 ;j<7;j++){
-			if(table[i][j]==0)	{cout << "  ";}
-			cout << "|";
+		if(choice == 1){
+			cout << "human" << endl;
+		}else if(choice == 2){
+			cout << "bot" << endl;
+		}else{
+			cout << "End";
+			}
 		}
-		cout <<endl <<"______________________"<< endl;
-	}		
 	
-	cout<<" 1  2  3  4  5  6  7\n";  
-	
+	return 0;
 }
+	
+
+
 
 
